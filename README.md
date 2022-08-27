@@ -7,6 +7,7 @@ Our project uses python and OpenCV2 along with green light detection to detect a
 - Python to MAC OS APP: https://py2app.readthedocs.io/en/latest/
 
 ## Download and use the .app file or follow the guide below to run it in python
+- Refer to the .zip files for the MAC OS version of the app
 
 # Process to run
 - git clone into the repository
