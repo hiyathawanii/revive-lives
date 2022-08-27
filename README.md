@@ -25,9 +25,7 @@ Our project uses python and OpenCV2 along with green light detection to detect a
 
 -----------------
 
-This project locates the user's face using [OpenCV](http://opencv.org/), after which it isolates the forehead area. The user's heart rate is calculated using data that is gathered over time from this place. To do this, the green channel of the subimage alone is used to measure the average optical intensity at the forehead location (a better colour mixing ratio may exist, but the blue channel tends to be very noisy). The optical absorption properties of (oxy-) haemoglobin (see http://www.opticsinfobase.org/oe/abstract.cfm?uri=oe-16-26-21434) allow for the estimation of physiological parameters in this method.
-
-In roughly 15 seconds, a stable heartbeat should be isolated with good lighting and little motion-related noise. The raw data stream should also show other physiological waveforms, such as [Mayer waves](http://en.wikipedia.org/wiki/Mayer waves)]. Real-time phase variation related to this frequency is also calculated after the user's heart rate has been determined. This makes it possible to amplify the heartbeat in the post-process frame rendering, which makes the highlighted area of the forehead pulse in time with the user's own heartbeat.
+This project first uses OpenCV to find the user's face, then it isolates the frontal region. The heart rate of the user is estimated using information received over time from this location. To do this, the average optical intensity at the forehead region is measured using only the green channel of the subimage (blue channel [heavy blue light presence] tends to be very noisy). The (oxy-) haemoglobin's optical absorption characteristics allow for the estimation of physiological parameters in this method. With adequate lighting and low motion-related noise, a stable heartbeat should be identified in around 15 seconds. The highlighted area of the forehead will pulse in rhythm with the user's own heartbeat thanks to the ability to increase the heartbeat in the post-process frame rendering.
 
 # Final Product Idea:
 Since a large amount of the Indian population has access to a smartphone and an internet connection we wanted to make use of the resources at hand to help reduce drug abuse. 
@@ -48,6 +46,4 @@ Since a large amount of the Indian population has access to a smartphone and an 
 Although it is possible to support detection on many individuals at once in an image stream from a single camera, only one face's worth of data is currently extracted for analysis.
 
 # Reference Heart Rate Values:
-<img src = "https://raw.githubusercontent.com/bebochakravarti/Revive-Lives-/main/heart%20rate%20.png"></img>
-
-The real-time signal processing's entire dataflow and execution sequence looks like:
+<img src = "https://raw.githubusercontent.com/bebochakravarti/Revive-Lives-/main/heart%20rate%20.png" style="width:500px;"></img>
