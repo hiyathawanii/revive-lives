@@ -19,7 +19,7 @@ Our project uses python and OpenCV2 along with green light detection to detect a
 - then run python get_pulse.py to start the detection process
 
 # Running the Jupyter Notebook
-- Notebook can be found with the name padelpy.py
+- Notebook can be found with the name padelpy.ipynb
 - Import notebook into google colab
 - Run ALL Cells
 
